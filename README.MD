@@ -1,1 +1,1 @@
-Simple script that, when run, will generate 10 keys - 8 characters long, comprised of numbers and lowercase letters - and write them to a file along with timestamps.
+This script will generate 10 keys (8 characters long, comprised of numbers and lowercase letters), create a file in the same directory named gift_keys.txt, and write/append the keys to the file along with their respective timestamps.

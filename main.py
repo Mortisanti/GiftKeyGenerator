@@ -1,5 +1,6 @@
 import random
 import string
+import sys
 from datetime import datetime
 # Other option for generating keys
 # import shortuuid
@@ -12,25 +13,27 @@ key_length = 8
 def main():
     # Function to create a random string of letters and numbers using the alphabet and length provided above
     def generate_key():
-        return ''.join(random.choices(alphabet, k=8))
+        return "".join(random.choices(alphabet, k=8))
 
     # Grab current date/time, format it, and save to variable
     date_and_time = datetime.now().strftime('%m-%d-%Y %H:%M:%S')
     # Open gift_keys.txt file using a context manager
     with open('gift_keys.txt', 'a') as f:
         # Write formatted current date and time
-        f.write('-----------------------\n')
-        f.write(f'| {date_and_time} |\n')
-        f.write('-----------------------\n')
+        f.write("-----------------------\n")
+        f.write(f"| {date_and_time} |\n")
+        f.write("-----------------------\n")
         # Generate and write 10 keys on separate lines
         for _ in range(10):
             gift_key = generate_key()
-            f.write(f'{gift_key}\n')
+            f.write(f"{gift_key}\n")
 
+    # Inform user of successful run and prompt for exit
     while True:
-        print('Keys generated.')
-        input('Press any key or close window to exit.')
+        print("Keys generated.")
+        input("Press any key or close window to exit.")
         break
+    sys.exit()
     
 if __name__ == '__main__':
     main()
