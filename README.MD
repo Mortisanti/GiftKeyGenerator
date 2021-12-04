@@ -1,0 +1,1 @@
+Simple script that, when run, will generate 10 keys - 8 characters long, comprised of numbers and lowercase letters - and write them to a file along with timestamps.
